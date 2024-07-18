@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class SongRecommendationBot {
+        public static void main(String[] args) {
+            // Create a scanner object to read user input
+            Scanner scanner = new Scanner(System.in);
+
+            // Welcome message
+            System.out.println("Hi, I'm your song recommendation bot!");
+            System.out.println("What kind of music are you in the mood for?");
+
+            // Read user input
+            String mood = scanner.nextLine();
+
+            // Generate a song recommendation based on the user's mood
+            String song = generateSongRecommendation(mood);
+
+            // Display the song recommendation
+            System.out.println("How about " + song + "?");
+        }
+
+        public static String generateSongRecommendation(String mood) {
+            String song = "";
+
+            // Add more moods and corresponding song recommendations as needed
+            if (mood.equalsIgnoreCase("happy")) {
+                song = "Happy by Pharrell Williams";
+            } else if (mood.equalsIgnoreCase("sad")) {
+                song = "Someone Like You by Adele";
+            } else if (mood.equalsIgnoreCase("romantic")) {
+                song = "Perfect by Ed Sheeran";
+            } else if(mood
+                    .equalsIgnoreCase("Punjabi beat")) {
+                song = "White Brown Black by Karan Aujla ";
+            } else if (mood.equalsIgnoreCase("energetic")) {
+                song = "Can't Hold Us by Macklemore & Ryan Lewis";
+            } else if (mood.equalsIgnoreCase("Lofi")) {
+                song = "Dandelions by Ruth B.,sped up+ slowed,slater ";
+            } else {
+                song = "Sorry, I don't have any recommendations for that mood.";
+            }
+
+            return song;
+}
+    }
+
